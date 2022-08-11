@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex</title>
+    <link rel="stylesheet" href="./scroll.css">
+</head>
+<body>
+    
+ 
+
+    
+<script>
+ 
+ 
+ function emailConceal(){
+    let email =prompt('please enter your email')
+    let reg = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}/ 
+ ///@|.com/
+ if(reg.test(email)) {
+    let concealed = email.replace( /(?<=.{2})\w+\w/,'****')
+    alert(concealed)
+ }     
+ else{
+    alert('plaease enter a valid email')
+    emailConceal()
+ }
+
+
+ }
+ 
+emailConceal()
+
+
+      
+ 
+
+
+
+
+
+
+</script>
+    
+</body>
+</html>
